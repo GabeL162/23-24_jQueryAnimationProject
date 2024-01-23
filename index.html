@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 LITTLE PIGS</title>
+    <!-- Boostrap Include -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- jQuery Include -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #wolf{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        #straw {
+            width: 100px;
+            height: 100px;
+            background-color: tan;
+            position: absolute;
+            left: 200px;
+            top: 300px;
+        }
+        #blueBox {
+            width: 100px;
+            height: 100px;
+            background-color: sandybrown;
+            position: absolute;
+            left: 500px;
+            top: 300px;
+        }
+        #brick {
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            position: absolute;
+            left: 800px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <div id="wolf"></div>
+            <div id="straw"></div>
+            <div id="stick"></div>
+            <div id="brick"></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<!-- Bootstrap Include -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $("#straw").click(function(){
+            $("#wolf").animate({
+                left: '+=200px',
+                height: '200',
+                width: '200',
+            });
+            $("#wolf").animate({
+                height: '100',
+                width: '100',
+            });
+            $("#greenBox").animate({
+                opacity: '0',
+            });
+        });
+        $("#stick").click(function(){
+            $("#wolf").animate({
+                left: '+=300px',
+                height: '200',
+                width: '200',
+            });
+            $("#wolf").animate({
+                height: '100',
+                width: '100',
+            });
+            $("#blueBox").animate({
+                opacity: '0',
+            });
+        });
+        $("#brick").click(function(){
+            $("#wolf").animate({
+                left: '+=300px',
+                height: '200',
+                width: '200',
+            });
+            $("#wolf").animate({
+                height: '100',
+                width: '100',
+            });
+        });
+    })
+</script>
+</body>
+</html>
