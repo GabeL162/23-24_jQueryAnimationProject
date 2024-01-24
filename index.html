@@ -12,7 +12,6 @@
         #wolf{
             width: 100px;
             height: 100px;
-            background-color: gray;
             position: absolute;
             left: 0px;
             top: 0px;
@@ -25,13 +24,29 @@
             left: 200px;
             top: 300px;
         }
-        #blueBox {
+        #pig1 {
+            width: 100px;
+            height: 100px;
+            background-color: tan;
+            position: absolute;
+            left: 200px;
+            top: 500px;
+        }
+        #stick {
             width: 100px;
             height: 100px;
             background-color: sandybrown;
             position: absolute;
             left: 500px;
             top: 300px;
+        }
+        #pig2 {
+            width: 100px;
+            height: 100px;
+            background-color: sandybrown;
+            position: absolute;
+            left: 500px;
+            top: 500px;
         }
         #brick {
             width: 100px;
@@ -41,6 +56,14 @@
             left: 800px;
             top: 300px;
         }
+        #pig3 {
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            position: absolute;
+            left: 800px;
+            top: 500px;
+        }
     </style>
 </head>
 <body>
@@ -48,10 +71,15 @@
 
     <div class="row">
         <div class="col-12">
-            <div id="wolf"></div>
-            <div id="straw"></div>
-            <div id="stick"></div>
-            <div id="brick"></div>
+            <h1>3 LITTLE PIGS</h1>
+            <h2>click the houses from left to right and the wolf will huff and puff to try to blow the house down.</h2>
+            <div id="wolf"><img src="img/bigBadWolf.webp"></div>
+            <div id="straw"><img src="img/strawHouse.png"></div>
+            <div id="stick"><img src="img/stickHouse.png"></div>
+            <div id="brick"><img src="img/brickHouse.png"></div>
+            <div id="pig1"><img src="img/pig1.png"></div>
+            <div id="pig2"><img src="img/pig2.png"></div>
+            <div id="pig3"><img src="img/pig3.png"></div>
         </div>
     </div>
 
@@ -73,8 +101,12 @@
                 height: '100',
                 width: '100',
             });
-            $("#greenBox").animate({
+            $("#straw").animate({
                 opacity: '0',
+            });
+            $("#pig1").animate({
+                left: '+=300px',
+                top: '+=200px',
             });
         });
         $("#stick").click(function(){
@@ -87,8 +119,16 @@
                 height: '100',
                 width: '100',
             });
-            $("#blueBox").animate({
+            $("#stick").animate({
                 opacity: '0',
+            });
+            $("#pig1").animate({
+                left: '+=300px',
+                top: '+=200px',
+            });
+            $("#pig2").animate({
+                left: '+=300px',
+                top: '+=200px',
             });
         });
         $("#brick").click(function(){
